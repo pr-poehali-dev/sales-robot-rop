@@ -14,13 +14,45 @@ const Index = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время.",
-    });
-    setFormData({ name: '', phone: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/9fcf954b-5abe-4434-bfe4-dd2556fa8959', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время.",
+        });
+        setFormData({ name: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: "Ошибка",
+          description: data.error || "Не удалось отправить заявку. Попробуйте позже.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить заявку. Проверьте подключение к интернету.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToContact = () => {
@@ -510,9 +542,9 @@ const Index = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" size="lg" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg">
+                    <Button type="submit" size="lg" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg" disabled={isSubmitting}>
                       <Icon name="MessageSquare" className="mr-2" size={20} />
-                      Получить консультацию
+                      {isSubmitting ? 'Отправка...' : 'Получить консультацию'}
                     </Button>
                     <Button type="button" onClick={scrollToContact} size="lg" variant="outline" className="flex-1 border-primary/50 hover:bg-primary/10 text-lg">
                       <Icon name="TrendingUp" className="mr-2" size={20} />
