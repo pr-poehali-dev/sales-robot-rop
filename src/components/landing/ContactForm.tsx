@@ -210,7 +210,7 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Icon name="Building2" size={16} />
-                      <span>ПРОГРЕСС для продаж</span>
+                      <span>AI Sales Rocket</span>
                     </div>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
 
       <footer className="py-8 px-4 border-t border-border/50">
         <div className="container mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2024 ПРОГРЕСС для продаж. Все права защищены.</p>
+          <p>© 2024 AI Sales Rocket. Все права защищены.</p>
         </div>
       </footer>
     </>
