@@ -97,7 +97,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
 
 def send_email_notification(name: str, phone: str, message: str) -> None:
     smtp_host = os.environ.get('SMTP_HOST')
-    smtp_port = int(os.environ.get('SMTP_PORT', '587'))
+    smtp_port = int(os.environ.get('SMTP_PORT', '465'))
     smtp_user = os.environ.get('SMTP_USER')
     smtp_password = os.environ.get('SMTP_PASSWORD')
     email_to = os.environ.get('EMAIL_TO')
@@ -136,8 +136,7 @@ def send_email_notification(name: str, phone: str, message: str) -> None:
     
     msg.attach(MIMEText(html_body, 'html', 'utf-8'))
     
-    # Send email
-    with smtplib.SMTP(smtp_host, smtp_port) as server:
-        server.starttls()
+    # Send email via SSL (port 465)
+    with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
