@@ -212,7 +212,7 @@ const InfoSections = () => {
         
         <div className="container mx-auto relative z-10 space-y-16">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">4️⃣ Что вы получаете</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">✨ Что вы получаете</h2>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
@@ -264,7 +264,7 @@ const InfoSections = () => {
           </div>
 
           <div className="text-center mb-12 mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">5️⃣ Пример выгоды</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">💰 Пример выгоды</h2>
           </div>
 
           <Card className="border-secondary/20 bg-gradient-to-br from-secondary/10 via-card/50 to-accent/10 backdrop-blur max-w-4xl mx-auto">
@@ -292,7 +292,7 @@ const InfoSections = () => {
           </Card>
 
           <div className="text-center mb-12 mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">6️⃣ Почему это важно</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 Почему это важно</h2>
           </div>
 
           <Card className="border-accent/20 bg-gradient-to-br from-accent/10 via-card/50 to-primary/10 backdrop-blur max-w-4xl mx-auto">
