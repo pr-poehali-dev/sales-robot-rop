@@ -22,12 +22,8 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               Объединяет звонки, переписки и CRM, чтобы видеть реальное состояние каждой сделки — 
               ещё до того, как вы её потеряете.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-4">
               <Button onClick={onContactClick} size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8">
-                <Icon name="MessageSquare" className="mr-2" size={20} />
-                Получить консультацию
-              </Button>
-              <Button onClick={onContactClick} size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 text-lg px-8">
                 <Icon name="TrendingDown" className="mr-2" size={20} />
                 Узнать, где теряются продажи
               </Button>
