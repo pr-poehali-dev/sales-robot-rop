@@ -158,7 +158,7 @@ const InfoSections = () => {
 
           <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur max-w-4xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">Полный цикл анализа</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">🩺 Пульс продаж в реальном времени</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
