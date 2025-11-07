@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import AdminLogin from '@/components/AdminLogin';
 
 interface Contact {
   id: number;
@@ -12,10 +13,13 @@ interface Contact {
   created_at: string;
 }
 
+const ADMIN_PASSWORD = 'robot2024';
+
 const Admin = () => {
   const { toast } = useToast();
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const fetchContacts = async () => {
     setIsLoading(true);
@@ -44,8 +48,41 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    fetchContacts();
+    const authStatus = sessionStorage.getItem('admin_authenticated');
+    if (authStatus === 'true') {
+      setIsAuthenticated(true);
+      fetchContacts();
+    } else {
+      setIsLoading(false);
+    }
   }, []);
+
+  const handleLogin = (password: string) => {
+    if (password === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      sessionStorage.setItem('admin_authenticated', 'true');
+      toast({
+        title: "Успешный вход",
+        description: "Добро пожаловать в админ-панель",
+      });
+      fetchContacts();
+    } else {
+      toast({
+        title: "Ошибка входа",
+        description: "Неверный пароль",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    sessionStorage.removeItem('admin_authenticated');
+    toast({
+      title: "Выход выполнен",
+      description: "Вы вышли из админ-панели",
+    });
+  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -58,6 +95,10 @@ const Admin = () => {
     }).format(date);
   };
 
+  if (!isAuthenticated) {
+    return <AdminLogin onLogin={handleLogin} />;
+  }
+
   return (
     <div className="min-h-screen bg-background p-4 md:p-8">
       <div className="container mx-auto max-w-7xl">
@@ -66,10 +107,16 @@ const Admin = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Админ-панель</h1>
             <p className="text-muted-foreground">Все заявки с формы обратной связи</p>
           </div>
-          <Button onClick={fetchContacts} variant="outline" disabled={isLoading}>
-            <Icon name="RefreshCw" className="mr-2" size={18} />
-            Обновить
-          </Button>
+          <div className="flex gap-2">
+            <Button onClick={fetchContacts} variant="outline" disabled={isLoading}>
+              <Icon name="RefreshCw" className="mr-2" size={18} />
+              Обновить
+            </Button>
+            <Button onClick={handleLogout} variant="outline">
+              <Icon name="LogOut" className="mr-2" size={18} />
+              Выйти
+            </Button>
+          </div>
         </div>
 
         {isLoading ? (
