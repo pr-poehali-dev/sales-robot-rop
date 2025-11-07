@@ -541,16 +541,10 @@ const Index = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" size="lg" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg" disabled={isSubmitting}>
-                      <Icon name="MessageSquare" className="mr-2" size={20} />
-                      {isSubmitting ? 'Отправка...' : 'Получить консультацию'}
-                    </Button>
-                    <Button type="button" onClick={scrollToContact} size="lg" variant="outline" className="flex-1 border-primary/50 hover:bg-primary/10 text-lg">
-                      <Icon name="TrendingUp" className="mr-2" size={20} />
-                      Проверить мой отдел
-                    </Button>
-                  </div>
+                  <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg" disabled={isSubmitting}>
+                    <Icon name="MessageSquare" className="mr-2" size={20} />
+                    {isSubmitting ? 'Отправка...' : 'Получить консультацию'}
+                  </Button>
                 </form>
 
                 <div className="mt-8 pt-8 border-t border-border space-y-4">
