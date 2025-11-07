@@ -198,8 +198,8 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Icon name="Mail" size={16} />
-                      <a href="mailto:a.veselov@b2bbasis.ru" className="hover:text-primary transition-colors">
-                        a.veselov@b2bbasis.ru
+                      <a href="https://t.me/veselovandrei" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                        @veselovandrei
                       </a>
                     </div>
                     <div className="flex items-center gap-2">
