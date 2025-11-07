@@ -210,71 +210,120 @@ const InfoSections = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto relative z-10 space-y-16">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">📊 Результаты внедрения</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Конкретные показатели роста продаж
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">4️⃣ Что вы получаете</h2>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <Card className="border-primary/20 bg-card/50 backdrop-blur text-center hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-8 space-y-2">
-                <div className="text-5xl font-bold text-primary mb-2">+30%</div>
-                <p className="text-lg font-semibold">Рост конверсии</p>
-                <p className="text-sm text-muted-foreground">за счёт точечных рекомендаций</p>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
+              <CardContent className="p-6 flex items-start gap-4">
+                <Icon name="Eye" className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Прозрачность по каждой сделке</h4>
+                  <p className="text-muted-foreground">где слились, где шанс вернуть клиента</p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-secondary/20 bg-card/50 backdrop-blur text-center hover:border-secondary/40 transition-all duration-300">
-              <CardContent className="p-8 space-y-2">
-                <div className="text-5xl font-bold text-secondary mb-2">-40%</div>
-                <p className="text-lg font-semibold">Потерь сделок</p>
-                <p className="text-sm text-muted-foreground">благодаря раннему обнаружению рисков</p>
+            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
+              <CardContent className="p-6 flex items-start gap-4">
+                <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Экономию времени руководителя и РОПа</h4>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-accent/20 bg-card/50 backdrop-blur text-center hover:border-accent/40 transition-all duration-300">
-              <CardContent className="p-8 space-y-2">
-                <div className="text-5xl font-bold text-accent mb-2">20 ч</div>
-                <p className="text-lg font-semibold">Экономия времени</p>
-                <p className="text-sm text-muted-foreground">руководителя в неделю</p>
+            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
+              <CardContent className="p-6 flex items-start gap-4">
+                <Icon name="Zap" className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Мгновенный анализ без сводок и таблиц</h4>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-primary/20 bg-card/50 backdrop-blur text-center hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-8 space-y-2">
-                <div className="text-5xl font-bold text-primary mb-2">100%</div>
-                <p className="text-lg font-semibold">Контроль сделок</p>
-                <p className="text-sm text-muted-foreground">без потери внимания</p>
+            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
+              <CardContent className="p-6 flex items-start gap-4">
+                <Icon name="LineChart" className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Прогноз на основе фактов, а не оптимизма</h4>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
+              <CardContent className="p-6 flex items-start gap-4">
+                <Icon name="Brain" className="text-primary flex-shrink-0 mt-1" size={24} />
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Умного помощника, который учится под ваш стиль продаж</h4>
+                </div>
               </CardContent>
             </Card>
           </div>
 
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-card/50 to-secondary/10 backdrop-blur max-w-4xl mx-auto">
-            <CardContent className="p-12 text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Icon name="TrendingUp" size={40} className="text-white" />
+          <div className="text-center mb-12 mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">5️⃣ Пример выгоды</h2>
+          </div>
+
+          <Card className="border-secondary/20 bg-gradient-to-br from-secondary/10 via-card/50 to-accent/10 backdrop-blur max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <div className="text-5xl mb-4">💥</div>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Уже на этапе тестирования Робот РОП помог клиентам вернуть:
+                </p>
               </div>
-              <h3 className="text-3xl font-bold mb-4">Реальный рост продаж</h3>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Вместо того чтобы тратить время на прослушивание звонков и анализ переписок, 
-                получите готовые инсайты и точечные действия для каждой сделки
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start gap-3 p-4 bg-card/50 rounded-lg">
+                  <Icon name="CheckCircle" className="text-secondary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">сделку на <span className="font-bold text-secondary">9 млн ₽</span>, считавшуюся безнадёжной</p>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-card/50 rounded-lg">
+                  <Icon name="CheckCircle" className="text-secondary flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg">и сделку на <span className="font-bold text-secondary">24 млн ₽</span>, где клиент "ушёл в раздумья"</p>
+                </div>
+              </div>
+              <div className="text-center p-4 bg-primary/10 rounded-lg border border-primary/30">
+                <p className="text-lg font-semibold">📌 Один возвращённый клиент — и проект полностью окупается.</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="text-center mb-12 mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">6️⃣ Почему это важно</h2>
+          </div>
+
+          <Card className="border-accent/20 bg-gradient-to-br from-accent/10 via-card/50 to-primary/10 backdrop-blur max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <p className="text-lg text-muted-foreground mb-6 text-center">
+                CRM покажет статус, дашборд и BI — цифры.<br />
+                Но только Робот РОП покажет, <span className="font-semibold text-foreground">где и почему</span> вы теряете деньги:
               </p>
-              <div className="flex flex-wrap justify-center gap-6 text-left">
-                <div className="flex items-center gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0" size={20} />
-                  <span>Экономия времени руководителя</span>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start gap-3">
+                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-muted-foreground">где менеджер не дошёл до ЛПР,</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0" size={20} />
-                  <span>Рост эффективности МОПов</span>
+                <div className="flex items-start gap-3">
+                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-muted-foreground">где сбился темп коммуникаций,</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0" size={20} />
-                  <span>Снижение потерь клиентов</span>
+                <div className="flex items-start gap-3">
+                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-muted-foreground">где клиент остыл после встречи,</p>
                 </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-muted-foreground">где пора вмешаться руководителю.</p>
+                </div>
+              </div>
+              <div className="p-6 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg border-2 border-primary/30 text-center">
+                <p className="text-xl font-semibold mb-2">⚡ Больше не нужно копаться в CRM и отчётах</p>
+                <p className="text-muted-foreground">
+                  Робот РОП мгновенно показывает, где падает "пульс продаж" и что требует внимания сегодня.
+                </p>
               </div>
             </CardContent>
           </Card>
