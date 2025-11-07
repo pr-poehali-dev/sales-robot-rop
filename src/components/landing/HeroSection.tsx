@@ -23,7 +23,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               ещё до того, как вы её потеряете.
             </p>
             <div className="pt-4">
-              <Button onClick={onContactClick} size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8">
+              <Button onClick={onContactClick} size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8 w-full">
                 <Icon name="TrendingDown" className="mr-2" size={20} />
                 Узнать, где теряются продажи
               </Button>
