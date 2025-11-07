@@ -17,7 +17,7 @@ const AdminSettings = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const storedPassword = localStorage.getItem('admin_password') || 'robot2024';
+    const storedPassword = localStorage.getItem('admin_password') || 'q123456';
 
     if (currentPassword !== storedPassword) {
       toast({

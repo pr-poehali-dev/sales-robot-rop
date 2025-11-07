@@ -59,7 +59,7 @@ const Admin = () => {
   }, []);
 
   const handleLogin = (password: string) => {
-    const storedPassword = localStorage.getItem('admin_password') || 'robot2024';
+    const storedPassword = localStorage.getItem('admin_password') || 'q123456';
     if (password === storedPassword) {
       setIsAuthenticated(true);
       sessionStorage.setItem('admin_authenticated', 'true');
