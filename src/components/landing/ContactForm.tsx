@@ -222,7 +222,7 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
 
       <footer className="py-8 px-4 border-t border-border/50">
         <div className="container mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2024 AI Sales Rocket. Все права защищены.</p>
+          <p>© 2025 AI Sales Rocket. Все права защищены.</p>
         </div>
       </footer>
     </>
