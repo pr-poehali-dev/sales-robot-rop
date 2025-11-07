@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "Handle OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "name": "Get all contact requests",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "contacts": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
