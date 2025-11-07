@@ -43,7 +43,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Icon name="UserCheck" className="text-primary flex-shrink-0" size={18} />
-                <span>Возврат клиентов</span>
+                <span>Возврат клиентов без отчётов</span>
               </div>
             </div>
           </div>
