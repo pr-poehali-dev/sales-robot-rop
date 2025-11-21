@@ -67,31 +67,37 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
             <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 backdrop-blur">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold mb-4">💼 Пилотный этап — «Разбор 5 сделок»</h3>
+                  <h3 className="text-3xl font-bold mb-4">Следующий шаг — диагностика эффективности управления сделками и готовности CRM к ИИ-анализу</h3>
                 </div>
 
                 <div className="space-y-6 mb-8">
-                  <p className="text-lg text-muted-foreground text-center">
-                    Эксперты Sales ПРОГРЕСС вручную анализируют 5 ваших провальных сделок, 
-                    чтобы определить ошибки и оценить потенциал внедрения Робота РОПа.
+                  <p className="text-lg font-semibold text-center mb-6">
+                    На диагностике вы получите:
                   </p>
 
-                  <div className="p-6 bg-card/50 rounded-lg border-2 border-primary/30 text-center">
-                    <div className="text-4xl mb-2">🎯</div>
-                    <p className="font-semibold text-2xl mb-2">Бесплатно</p>
-                    <p className="text-muted-foreground">
-                      если мы не найдём ни одной ошибки, стоившей вам выручки
-                    </p>
+                  <div className="space-y-4">
+                    {[
+                      "чек-лист готовности отдела к внедрению AI-ассистента",
+                      "анализ слепых зон в управлении сделками",
+                      "рекомендации, что улучшить уже сейчас",
+                      "приоритизацию внедрения ИИ: что даст максимальный эффект",
+                      "обоснование необходимости внедрения для руководства"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg">
+                        <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
                   </div>
 
-                  <p className="text-center text-muted-foreground">
-                    После пилота — точное техзадание для внедрения Робота РОП 1.0
-                  </p>
+                  <div className="p-6 bg-card/50 rounded-lg border-2 border-primary/30 text-center">
+                    <p className="font-semibold text-lg mb-2">Формат: онлайн-встреча 20–30 минут</p>
+                  </div>
                 </div>
 
                 <Button onClick={scrollToContact} size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg">
                   <Icon name="Brain" className="mr-2" size={20} />
-                  Хочу разбор 5 сделок
+                  Записаться на диагностику
                 </Button>
               </CardContent>
             </Card>
