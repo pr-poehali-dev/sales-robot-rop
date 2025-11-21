@@ -51,23 +51,27 @@ const InfoSections = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mb-4">
                   <span className="text-4xl">📈</span>
                 </div>
-                <h3 className="text-2xl font-bold">Для РОПа</h3>
+                <h3 className="text-2xl font-bold">Руководителю отдела продаж</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Контролирует активность, качество и эффективность МОПов</span>
+                    <span>Экономия времени — меньше ручного разбора сделок.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Получает отчёт по "здоровью" сделок и точечные рекомендации</span>
+                    <span>Контроль логики, темпа и качества работы менеджеров.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Экономит до 20 часов в неделю на ручном разборе</span>
+                    <span>Мгновенные рекомендации после и перед коммуникациями.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Следит за ритмом коммуникаций и предупреждает об отставаниях</span>
+                    <span>Подсветка типовых ошибок команды.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Сигналы о «застревающих» сделках и ситуациях, где нужно вмешаться.</span>
                   </li>
                 </ul>
               </CardContent>
