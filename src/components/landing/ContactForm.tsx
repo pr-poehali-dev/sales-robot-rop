@@ -109,28 +109,37 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
         <div className="absolute inset-0 tech-grid opacity-20"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">🚀 Что будет дальше</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              После пилота Робот РОП 1.0 может расшириться за счёт AI-модулей
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Какими задачами можно дополнительно нагрузить Робота РОПа</h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-card/50 backdrop-blur">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
                   {[
-                    "🧠 Бизнес-тренер для обучения менеджеров",
-                    "📦 SKU-разведчик (анализ прайсов конкурентов)",
-                    "☎️ Оценка качества звонков",
-                    "🧾 Автозаполнение CRM",
-                    "📊 Продвинутая аналитика KPI",
-                    "✅ Контроль задач, отчётов и планёрок"
+                    { text: "🧠 Бизнес-тренер для обучения и тренировки менеджеров", mark: true },
+                    { text: "📦 SKU-разведчик (анализ прайс-листов клиентов и конкурентов)", mark: true },
+                    { text: "☎️ Оценка качества звонков и обратная связь", mark: true },
+                    { text: "🧾 Автоматическое заполнение карточки CRM по итогам разговоров", mark: false },
+                    { text: "⚠️ Мониторинг рабочих чатов на предмет недовольства клиентов", mark: false },
+                    { text: "📊 Продвинутая аналитика воронок и KPI", mark: false },
+                    { text: "✅ Контроль исполнения задач в CRM", mark: false },
+                    { text: "📋 Проверка отчётов и поиск несоответствий", mark: false },
+                    { text: "🧭 Проведение планёрок и обучение команды", mark: false },
+                    { text: "🔧 Другие AI-модули из платформы AI Sales Rocket", mark: false }
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-primary/5 rounded-lg border border-primary/10">
-                      <span className="text-muted-foreground">{feature}</span>
+                    <div key={index} className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/10">
+                      <span className="text-muted-foreground flex-1">
+                        {feature.text}
+                        {feature.mark && <span className="text-primary ml-1">*</span>}
+                      </span>
                     </div>
                   ))}
+                </div>
+                <div className="mt-6 pt-6 border-t border-border/30">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="text-primary">*</span> — можно внедрять уже завтра, даже без основного функционала Робота РОПа и без сложных интеграций
+                  </p>
                 </div>
               </CardContent>
             </Card>
