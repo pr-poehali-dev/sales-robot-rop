@@ -20,23 +20,27 @@ const InfoSections = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4">
                   <span className="text-4xl">👔</span>
                 </div>
-                <h3 className="text-2xl font-bold">Для директора / собственника</h3>
+                <h3 className="text-2xl font-bold">Директору</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Видит реальную картину продаж, без "оптимизма" менеджеров</span>
+                    <span>Ускорение сделок и рост продаж без увеличения штата.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Экономит часы на прослушивании звонков и отчётах</span>
+                    <span>Ранние сигналы о рисках, просадках и узких местах в системе продаж.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Своевременно получает сигналы о рисках и узких местах</span>
+                    <span>Дополнительная выручка за счёт устранения ошибок до потери клиентов.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Увеличивает выручку без увеличения штата</span>
+                    <span>Прозрачная картина по всем сделкам — без искажений и оптимизма.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Понимание, где конкретно теряются деньги.</span>
                   </li>
                 </ul>
               </CardContent>
