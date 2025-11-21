@@ -82,23 +82,27 @@ const InfoSections = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mb-4">
                   <span className="text-4xl">💬</span>
                 </div>
-                <h3 className="text-2xl font-bold">Для менеджера по продажам</h3>
+                <h3 className="text-2xl font-bold">Менеджерам по продажам</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Подсказки перед и после звонка: с кем говорить, как ответить, чем аргументировать</span>
+                    <span>Рекомендации перед звонками и встречами: что уточнить, как аргументировать, как вести диалог (по запросу — мини-скрипт).</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Напоминает, где клиент "завис" и когда нужно вернуться к контакту</span>
+                    <span>Подсказки после каждого звонка и переписки.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Мгновенные рекомендации — без бесконечных отчётов</span>
+                    <span>Напоминания о потерянных касаниях и «остывших» клиентах.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Реальная помощь в дожиме сделок и росте конверсии</span>
+                    <span>Быстрее двигать сделки и повышать конверсию.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
+                    <span>Снижение рутины и рост эффективности.</span>
                   </li>
                 </ul>
               </CardContent>
