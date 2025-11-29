@@ -207,6 +207,10 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
                     <Icon name="Send" className="mr-2" size={20} />
                     {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
+                  
+                  <p className="text-sm text-muted-foreground text-center mt-4">
+                    Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных
+                  </p>
                 </form>
 
                 <div className="mt-8 pt-8 border-t border-border/50">
