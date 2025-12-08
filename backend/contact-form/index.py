@@ -44,6 +44,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     name: str = body_data.get('name', '').strip()
     phone: str = body_data.get('phone', '').strip()
     message: str = body_data.get('message', '').strip()
+    site: str = body_data.get('site', '').strip()
     
     # Validate required fields
     if not name or not phone:
@@ -63,11 +64,11 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     
     # Insert contact request
     insert_query = """
-        INSERT INTO contact_requests (name, phone, message)
-        VALUES (%s, %s, %s)
+        INSERT INTO contact_requests (name, phone, message, site)
+        VALUES (%s, %s, %s, %s)
         RETURNING id, created_at
     """
-    cursor.execute(insert_query, (name, phone, message if message else None))
+    cursor.execute(insert_query, (name, phone, message if message else None, site if site else None))
     result = cursor.fetchone()
     
     conn.commit()

@@ -13,6 +13,7 @@ interface Contact {
   phone: string;
   message: string;
   created_at: string;
+  site?: string;
 }
 
 const Admin = () => {
@@ -157,19 +158,34 @@ const Admin = () => {
                   <Card key={contact.id} className="border-primary/20 hover:border-primary/40 transition-all">
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">
-                        <div>
+                        <div className="flex-1">
                           <CardTitle className="text-xl mb-1">{contact.name}</CardTitle>
-                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Icon name="Phone" size={14} />
-                              <a href={`tel:${contact.phone}`} className="hover:text-primary transition-colors">
-                                {contact.phone}
-                              </a>
+                          <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-4">
+                              <div className="flex items-center gap-1">
+                                <Icon name="Phone" size={14} />
+                                <a href={`tel:${contact.phone}`} className="hover:text-primary transition-colors">
+                                  {contact.phone}
+                                </a>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Icon name="Calendar" size={14} />
+                                {formatDate(contact.created_at)}
+                              </div>
                             </div>
-                            <div className="flex items-center gap-1">
-                              <Icon name="Calendar" size={14} />
-                              {formatDate(contact.created_at)}
-                            </div>
+                            {contact.site && (
+                              <div className="flex items-start gap-1">
+                                <Icon name="Globe" size={14} className="mt-0.5 flex-shrink-0" />
+                                <a 
+                                  href={contact.site} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:text-primary transition-colors break-all text-xs"
+                                >
+                                  {contact.site}
+                                </a>
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">

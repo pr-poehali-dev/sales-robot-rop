@@ -51,7 +51,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     cur = conn.cursor(cursor_factory=RealDictCursor)
     
     cur.execute('''
-        SELECT id, name, phone, message, created_at 
+        SELECT id, name, phone, message, created_at, site 
         FROM contact_requests 
         ORDER BY created_at DESC
     ''')
