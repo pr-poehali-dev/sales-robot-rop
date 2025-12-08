@@ -18,7 +18,7 @@ const InfoSections = () => {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
-                    <span>250+ (>95%) сделок вне контроля</span>
+                    <span>250+ (&gt;95%) сделок вне контроля</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
