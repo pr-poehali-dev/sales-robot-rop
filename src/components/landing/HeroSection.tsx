@@ -16,34 +16,32 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              🤖 Робот РОП 1.0 — ваш AI-помощник по анализу сделок
+              🤖 Робот РОП 1.0 — AI-анализ 250+ сделок 24/7
             </h1>
             <p className="text-xl text-muted-foreground">
-              Объединяет звонки, переписки и CRM, чтобы видеть реальное состояние каждой сделки — 
-              ещё до того, как вы её потеряете.
+              Анализирует каждую сделку и подсказывает МОПу и РОПу, как быстрее закрывать сделки и не терять деньги.
             </p>
             <div className="pt-4">
               <Button onClick={onContactClick} size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8 w-full">
-                <Icon name="TrendingDown" className="mr-2" size={20} />
-                Узнать, где теряются продажи
+                👉 Записаться на диагностику
               </Button>
             </div>
             <div className="grid grid-cols-2 gap-3 pt-4 text-sm">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="Clock" className="text-primary flex-shrink-0" size={18} />
-                <span>Анализ сделок 24/7</span>
-              </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Icon name="AlertTriangle" className="text-primary flex-shrink-0" size={18} />
                 <span>Сигналы о рисках до срыва</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="LineChart" className="text-primary flex-shrink-0" size={18} />
-                <span>Прогноз на основе фактов</span>
+                <Icon name="Zap" className="text-primary flex-shrink-0" size={18} />
+                <span>Подсказки в реальном времени</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Icon name="UserCheck" className="text-primary flex-shrink-0" size={18} />
-                <span>Возврат клиентов без отчётов</span>
+                <Icon name="TrendingUp" className="text-primary flex-shrink-0" size={18} />
+                <span>Спасение крупных сделок (+13% конверсии)</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Icon name="Target" className="text-primary flex-shrink-0" size={18} />
+                <span>Менеджеру и РОПу</span>
               </div>
             </div>
           </div>

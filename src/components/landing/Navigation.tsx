@@ -17,8 +17,8 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
         <div className="hidden md:flex gap-6">
           <a href="#who" className="text-sm hover:text-primary transition-colors">Кому полезен</a>
           <a href="#how" className="text-sm hover:text-primary transition-colors">Как работает</a>
-          <a href="#results" className="text-sm hover:text-primary transition-colors">Результаты</a>
-          <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
+          <a href="#results" className="text-sm hover:text-primary transition-colors">Выгода</a>
+          <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакт</a>
         </div>
         <Button onClick={onContactClick} className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
           Получить консультацию

@@ -4,8 +4,75 @@ import Icon from '@/components/ui/icon';
 const InfoSections = () => {
   return (
     <>
-      <section id="who" className="py-20 px-4 relative">
+      <section className="py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Почему это нужно?</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="border-destructive/30 bg-destructive/5 backdrop-blur">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-destructive">Без Робота РОПа</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
+                    <span>250+ (>95%) сделок вне контроля</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
+                    <span>Риски и ошибки замечаются слишком поздно</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
+                    <span>Потеря темпа и контакта с ЛПР остаётся незамеченной</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
+                    <span>Директор узнаёт о проблемах, когда клиент уже потерян</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={18} />
+                    <span>Разбор ошибок постфактум с минимальным влиянием на результат</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/30 bg-primary/5 backdrop-blur">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-primary">С Роботом РОПом</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>100% сделок анализируются ежедневно</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Мгновенные подсказки менеджерам</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>РОП работает только с критичными ситуациями (экономия 8+ часов)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Риски выявляются заранее → спасаются крупные сделки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Встроенный отдел контроля качества 24/7 без зарплат и отпусков</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="who" className="py-20 px-4 relative">
+        <div className="absolute inset-0 tech-grid opacity-20"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Кому полезен Робот РОП</h2>
@@ -24,23 +91,23 @@ const InfoSections = () => {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Ускорение сделок и рост продаж без увеличения штата.</span>
+                    <span>Рост продаж без увеличения штата</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Ранние сигналы о рисках, просадках и узких местах в системе продаж.</span>
+                    <span>Выявление мест потерь и ошибок</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Дополнительная выручка за счёт устранения ошибок до потери клиентов.</span>
+                    <span>Прозрачность по всем сделкам</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Прозрачная картина по всем сделкам — без искажений и оптимизма.</span>
+                    <span>Поддержка отдела даже при отсутствии РОПа</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                    <span>Понимание, где конкретно теряются деньги.</span>
+                    <span>Больше результатов для компании и владельцев</span>
                   </li>
                 </ul>
               </CardContent>
@@ -51,27 +118,31 @@ const InfoSections = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mb-4">
                   <span className="text-4xl">📈</span>
                 </div>
-                <h3 className="text-2xl font-bold">Руководителю отдела продаж</h3>
+                <h3 className="text-2xl font-bold">Руководителю отдела продаж (РОПу)</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Экономия времени — меньше ручного разбора сделок.</span>
+                    <span>Экономия 8+ часов ежедневно</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Контроль логики, темпа и качества работы менеджеров.</span>
+                    <span>Подсветка критичных ошибок менеджеров</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Мгновенные рекомендации после и перед коммуникациями.</span>
+                    <span>Точные подсказки: куда вмешаться сегодня</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Подсветка типовых ошибок команды.</span>
+                    <span>Разбор только самых денежных ситуаций</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
-                    <span>Сигналы о «застревающих» сделках и ситуациях, где нужно вмешаться.</span>
+                    <span>Меньше конфликтов с менеджерами</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Проще давать отчёт директору</span>
                   </li>
                 </ul>
               </CardContent>
@@ -86,23 +157,23 @@ const InfoSections = () => {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Рекомендации перед звонками и встречами: что уточнить, как аргументировать, как вести диалог (по запросу — мини-скрипт).</span>
+                    <span>Что сказать на следующем звонке</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Подсказки после каждого звонка и переписки.</span>
+                    <span>Подсказки после звонков и переписок</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Напоминания о потерянных касаниях и «остывших» клиентах.</span>
+                    <span>Напоминания о потерянных касаниях</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Быстрее двигать сделки и повышать конверсию.</span>
+                    <span>Рост конверсии</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" className="text-accent mt-1 flex-shrink-0" size={18} />
-                    <span>Снижение рутины и рост эффективности.</span>
+                    <span>Снижение рутины</span>
                   </li>
                 </ul>
               </CardContent>
@@ -112,233 +183,358 @@ const InfoSections = () => {
       </section>
 
       <section id="how" className="py-20 px-4 relative">
-        <div className="absolute inset-0 tech-grid opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">⚙️ Как работает Робот РОП</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Как работает Робот РОП</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Три сценария работы для полного контроля продаж
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
               <CardContent className="p-8 space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4">
-                  <Icon name="MessageSquare" size={32} className="text-white" />
+                  <span className="text-3xl">🔍</span>
                 </div>
-                <h3 className="text-2xl font-bold">Сценарий 1</h3>
-                <p className="text-lg font-semibold text-primary">После коммуникации</p>
-                <div className="space-y-2 text-muted-foreground text-sm">
-                  <p>→ Анализирует все предыдущие касания</p>
-                  <p>→ Определяет ошибки и рекомендации</p>
-                  <p>→ При критических проблемах уведомляет руководителя</p>
-                </div>
+                <h3 className="text-2xl font-bold">После коммуникации</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">→</span>
+                    <span>Разбор звонка или переписки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">→</span>
+                    <span>Выявленные ошибки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">→</span>
+                    <span>Рекомендации</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary">→</span>
+                    <span>Сигнал РОПу при критических ошибках</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 
             <Card className="border-secondary/20 bg-card/50 backdrop-blur hover:border-secondary/40 transition-all duration-300">
               <CardContent className="p-8 space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mb-4">
-                  <Icon name="Brain" size={32} className="text-white" />
+                  <span className="text-3xl">🎯</span>
                 </div>
-                <h3 className="text-2xl font-bold">Сценарий 2</h3>
-                <p className="text-lg font-semibold text-secondary">Перед коммуникацией</p>
-                <div className="space-y-2 text-muted-foreground text-sm">
-                  <p>→ Анализирует историю сделок</p>
-                  <p>→ Подсказывает, что и как обсудить</p>
-                  <p>→ Готовит менеджера к успешному звонку или встрече</p>
-                </div>
+                <h3 className="text-2xl font-bold">Перед коммуникацией</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary">→</span>
+                    <span>Анализ всей истории сделки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary">→</span>
+                    <span>Что спросить</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary">→</span>
+                    <span>Какие аргументы использовать</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary">→</span>
+                    <span>Готовый план действий</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 
             <Card className="border-accent/20 bg-card/50 backdrop-blur hover:border-accent/40 transition-all duration-300">
               <CardContent className="p-8 space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mb-4">
-                  <Icon name="Activity" size={32} className="text-white" />
+                  <span className="text-3xl">❤️‍🩹</span>
                 </div>
-                <h3 className="text-2xl font-bold">Сценарий 3</h3>
-                <p className="text-lg font-semibold text-accent">Анализ "здоровья сделки"</p>
-                <div className="space-y-2 text-muted-foreground text-sm">
-                  <p>→ Оценивает "пульс" сделки: насколько она жива</p>
-                  <p>→ Видит, где нарушен темп общения</p>
-                  <p>→ Предупреждает руководителя до потери клиента</p>
-                </div>
+                <h3 className="text-2xl font-bold">Здоровье сделки</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">→</span>
+                    <span>Темп</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">→</span>
+                    <span>Участники</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">→</span>
+                    <span>Потерянные касания</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">→</span>
+                    <span>Риски потери клиента</span>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
-
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">🩺 Пульс продаж в реальном времени</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Mic" size={16} className="text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Собирает данные</h4>
-                      <p className="text-sm text-muted-foreground">Звонки, переписки, изменения в CRM</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Search" size={16} className="text-secondary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Анализирует контекст</h4>
-                      <p className="text-sm text-muted-foreground">Изучает всю историю сделки и поведение клиента</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Target" size={16} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Выявляет проблемы</h4>
-                      <p className="text-sm text-muted-foreground">Риски срыва, потери темпа, ошибки менеджера</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Lightbulb" size={16} className="text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Даёт рекомендации</h4>
-                      <p className="text-sm text-muted-foreground">Конкретные шаги для возврата клиента</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
-      <section id="results" className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto relative z-10 space-y-16">
+      <section className="py-20 px-4 relative">
+        <div className="absolute inset-0 tech-grid opacity-20"></div>
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">✨ Что вы получаете</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Пульс продаж в реальном времени</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6 flex items-start gap-4">
-                <Icon name="Eye" className="text-primary flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-semibold text-lg mb-1">Прозрачность по каждой сделке</h4>
-                  <p className="text-muted-foreground">где слились, где шанс вернуть клиента</p>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6">
+              <Card className="border-primary/20 bg-card/50 backdrop-blur text-center">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                    <Icon name="Database" className="text-primary" size={24} />
+                  </div>
+                  <h4 className="font-bold">Собирает данные</h4>
+                  <p className="text-sm text-muted-foreground">Звонки, переписки, изменения в CRM</p>
+                </CardContent>
+              </Card>
 
-            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6 flex items-start gap-4">
-                <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-semibold text-lg mb-1">Экономию времени руководителя и РОПа</h4>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="border-secondary/20 bg-card/50 backdrop-blur text-center">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto">
+                    <Icon name="Brain" className="text-secondary" size={24} />
+                  </div>
+                  <h4 className="font-bold">Анализирует контекст</h4>
+                  <p className="text-sm text-muted-foreground">История сделки и поведение клиента</p>
+                </CardContent>
+              </Card>
 
-            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6 flex items-start gap-4">
-                <Icon name="Zap" className="text-primary flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-semibold text-lg mb-1">Мгновенный анализ без сводок и таблиц</h4>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="border-accent/20 bg-card/50 backdrop-blur text-center">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
+                    <Icon name="AlertTriangle" className="text-accent" size={24} />
+                  </div>
+                  <h4 className="font-bold">Выявляет проблемы</h4>
+                  <p className="text-sm text-muted-foreground">Риски срыва, потеря темпа, ошибки менеджера</p>
+                </CardContent>
+              </Card>
 
-            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6 flex items-start gap-4">
-                <Icon name="LineChart" className="text-primary flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-semibold text-lg mb-1">Прогноз на основе фактов, а не оптимизма</h4>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="border-primary/20 bg-card/50 backdrop-blur text-center">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+                    <Icon name="Lightbulb" className="text-primary" size={24} />
+                  </div>
+                  <h4 className="font-bold">Даёт рекомендации</h4>
+                  <p className="text-sm text-muted-foreground">Конкретные шаги для возврата клиента</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <Card className="border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6 flex items-start gap-4">
-                <Icon name="Brain" className="text-primary flex-shrink-0 mt-1" size={24} />
-                <div>
-                  <h4 className="font-semibold text-lg mb-1">Умного помощника, который учится под ваш стиль продаж</h4>
-                </div>
-              </CardContent>
-            </Card>
+      <section id="results" className="py-20 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Пример выгоды</h2>
           </div>
 
-          <div className="text-center mb-12 mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">💰 Пример выгоды</h2>
-          </div>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <Card className="border-primary/30 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4">
+                  <div className="text-5xl">💰</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Возвращена сделка на 9 млн ₽</h3>
+                    <p className="text-muted-foreground">Робот обнаружил потерю контакта с ЛПР и предложил план возврата</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-          <Card className="border-secondary/20 bg-gradient-to-br from-secondary/10 via-card/50 to-accent/10 backdrop-blur max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <div className="text-5xl mb-4">💥</div>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Уже на этапе тестирования Робот РОП помог клиентам вернуть:
+            <Card className="border-secondary/30 bg-gradient-to-r from-secondary/10 to-primary/10 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4">
+                  <div className="text-5xl">💎</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">Возвращена сделка на 24 млн ₽</h3>
+                    <p className="text-muted-foreground">Выявлена критическая ошибка менеджера до потери клиента</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-accent/30 bg-gradient-to-r from-accent/10 to-secondary/10 backdrop-blur">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-4">Один возвращённый клиент полностью окупает внедрение</h3>
+                <p className="text-lg text-muted-foreground">
+                  Такие ситуации происходят регулярно — робот видит то, что менеджеры и РОПы пропускают.
                 </p>
-              </div>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3 p-4 bg-card/50 rounded-lg">
-                  <Icon name="CheckCircle" className="text-secondary flex-shrink-0 mt-1" size={24} />
-                  <p className="text-lg">сделку на <span className="font-bold text-secondary">9 млн ₽</span>, считавшуюся безнадёжной</p>
-                </div>
-                <div className="flex items-start gap-3 p-4 bg-card/50 rounded-lg">
-                  <Icon name="CheckCircle" className="text-secondary flex-shrink-0 mt-1" size={24} />
-                  <p className="text-lg">и сделку на <span className="font-bold text-secondary">24 млн ₽</span>, где клиент "ушёл в раздумья"</p>
-                </div>
-              </div>
-              <div className="text-center p-4 bg-primary/10 rounded-lg border border-primary/30">
-                <p className="text-lg font-semibold">📌 Один возвращённый клиент — и проект полностью окупается.</p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
-          <div className="text-center mb-12 mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 Почему это важно</h2>
+      <section className="py-20 px-4 relative">
+        <div className="absolute inset-0 tech-grid opacity-20"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold">Почему это выгодно директору</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Отдел продаж работает стабильнее, независимо от «звёздности» РОПа</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Повышение выручки без увеличения штата</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Прозрачность по всем сделкам в реальном времени</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Снижение потерь и ошибок, которые приводят к упущенной прибыли</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Более предсказуемый и управляемый процесс продаж</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Системность, которая сохраняется даже при смене РОПа</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-secondary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold">Почему это выгодно РОПу</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Робот снимает рутину и поток мелких задач</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>РОП работает только с критичными ситуациями</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Экономия 8+ часов ежедневно</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Фокус на деньгах, а не на переписках</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Меньше конфликтов с менеджерами</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Легко показывать директору факты, а не догадки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-secondary mt-1 flex-shrink-0" size={18} />
+                    <span>Поддержка отдела даже в отсутствие РОПа (командировки, отпуск, болезнь)</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Какими задачами можно дополнительно нагрузить Робота РОПа</h2>
           </div>
 
-          <Card className="border-accent/20 bg-gradient-to-br from-accent/10 via-card/50 to-primary/10 backdrop-blur max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <p className="text-lg text-muted-foreground mb-6 text-center">
-                CRM покажет статус, дашборд и BI — цифры.<br />
-                Но только Робот РОП покажет, <span className="font-semibold text-foreground">где и почему</span> вы теряете деньги:
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start gap-3">
-                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-muted-foreground">где менеджер не дошёл до ЛПР,</p>
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-8">
+                <div className="space-y-3">
+                  {[
+                    { text: "Обучение и тренировки менеджеров", mark: false },
+                    { text: "SKU-разведка (прайсы клиентов и конкурентов)", mark: false },
+                    { text: "Оценка качества звонков и обратная связь", mark: false },
+                    { text: "Автоматическое заполнение CRM", mark: true },
+                    { text: "Мониторинг рабочих чатов", mark: true },
+                    { text: "Продвинутая аналитика", mark: true },
+                    { text: "Контроль задач", mark: true },
+                    { text: "Проверка отчётов", mark: true },
+                    { text: "Проведение планёрок", mark: true },
+                    { text: "Другие AI-модули AI Sales Rocket", mark: true }
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/10">
+                      <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={18} />
+                      <span className="text-muted-foreground flex-1">
+                        {feature.text}
+                        {feature.mark && <span className="text-primary ml-1">*</span>}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-muted-foreground">где сбился темп коммуникаций,</p>
+                <div className="mt-6 pt-6 border-t border-border/30">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="text-primary">*</span> Задачи с * внедряются без интеграции с CRM и без основного функционала.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-muted-foreground">где клиент остыл после встречи,</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="AlertCircle" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-muted-foreground">где пора вмешаться руководителю.</p>
-                </div>
-              </div>
-              <div className="p-6 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg border-2 border-primary/30 text-center">
-                <p className="text-xl font-semibold mb-2">⚡ Больше не нужно копаться в CRM и отчётах</p>
-                <p className="text-muted-foreground">
-                  Робот РОП мгновенно показывает, где падает "пульс продаж" и что требует внимания сегодня.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative">
+        <div className="absolute inset-0 tech-grid opacity-20"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Частые вопросы</h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-2">Заменяет ли Робот РОП живого РОПа?</h3>
+                <p className="text-muted-foreground">Частично. Робот анализирует всё и подсказывает, человек принимает решения.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-2">Сколько занимает внедрение?</h3>
+                <p className="text-muted-foreground">4–8 недель пилот в ручном режиме + 1–8 недель интеграции.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-2">Что будет на диагностике?</h3>
+                <p className="text-muted-foreground">Разбор готовности вашей системы продаж к AI и рекомендации, дающие эффект сразу.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-2">Это безопасно?</h3>
+                <p className="text-muted-foreground">Да. Возможна работа по НДА и/или анонимизация данных.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 bg-card/50 backdrop-blur">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold mb-2">Сможет ли работать с моей CRM?</h3>
+                <p className="text-muted-foreground">Да. Пилот запускается даже без интеграции.</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </>
