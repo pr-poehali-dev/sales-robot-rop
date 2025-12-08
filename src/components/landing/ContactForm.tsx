@@ -129,6 +129,10 @@ const ContactForm = ({ scrollToContact }: ContactFormProps) => {
                       </>
                     )}
                   </Button>
+
+                  <p className="text-xs text-muted-foreground text-center">
+                    Нажимая на кнопку, вы принимаете <a href="/personal" className="underline hover:text-primary transition-colors">Положение и Согласие на обработку персональных данных</a>
+                  </p>
                 </form>
               </CardContent>
             </Card>
